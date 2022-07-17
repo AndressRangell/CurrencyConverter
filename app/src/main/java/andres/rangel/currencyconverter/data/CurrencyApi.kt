@@ -13,8 +13,8 @@ interface CurrencyApi {
     suspend fun getConvert(
         @Query("from") from: String,
         @Query("to") to: String,
-        @Query("amount") amount: Double,
-        @Header("Authorization") token: String = API_KEY
+        @Query("amount") amount: String,
+        @Header("apikey") token: String = API_KEY
     ): Response<Result>
 
 }
